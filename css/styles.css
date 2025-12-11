@@ -1,3 +1,5 @@
+/* #region Base */
+
 body {
   color: #434455;
   background-color: #ffffff;
@@ -9,6 +11,19 @@ body {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 .link {
@@ -16,6 +31,49 @@ ul {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-decoration: none;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  text-align: center;
+  text-transform: capitalize;
+}
+
+.sub-section-header {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+
+.container {
+  max-width: 1158px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
 }
 
 .logo-header,
@@ -28,6 +86,14 @@ ul {
   line-height: 1.17;
   letter-spacing: 0.03em;
 }
+
+.section {
+  padding: 120px 0;
+}
+
+/* #endregion */
+
+/* #region Header */
 
 .logo-header {
   color: #4d5ae5;
@@ -58,10 +124,37 @@ ul {
 .address-links .link:focus {
   color: #404bbf;
 }
+.page-header .container {
+  display: flex;
+  padding: 24px 0;
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 76px;
+  flex-grow: 1;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.address-links {
+  display: flex;
+  gap: 40px;
+}
+
+/* #endregion */
+
+/* #region Hero */
 
 .hero-image {
-  background-color: #2e2f42;
   color: #ffffff;
+  background-color: #2e2f42;
   text-align: center;
 }
 
@@ -80,6 +173,11 @@ ul {
   letter-spacing: 0.04em;
   color: currentColor;
   cursor: pointer;
+  min-width: 169px;
+  min-height: 56px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  border: 0 solid transparent;
+  border-radius: 4px;
 }
 
 .order-button:hover,
@@ -87,23 +185,40 @@ ul {
   background-color: #404bbf;
 }
 
-.section-title {
-  font-weight: bold;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
-  text-align: center;
-  text-transform: capitalize;
+.hero-image {
+  justify-content: center;
+  align-items: center;
+}
+.page-title {
+  max-width: 496px;
+  padding-top: 66px;
+  margin: 0 auto 48px;
 }
 
-.sub-section-header {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
+/* #endregion */
+
+/* #region Advantages */
+
+.advantages-section > .container {
+  margin: 0 auto;
 }
+
+.advantages-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+.advantages-item {
+  width: calc((100% - 3 * 24) / 4);
+}
+
+.advantages-list .sub-section-header {
+  margin-bottom: 8px;
+}
+
+/* #endregion */
+
+/* #region Team */
 
 .team-section {
   background-color: #f4f4fd;
@@ -112,6 +227,67 @@ ul {
 .team-card {
   background-color: #ffffff;
 }
+
+.team-section .section-title {
+  margin-bottom: 72px;
+}
+
+.team-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-card {
+  width: calc((100% - 3 * 24px) / 4);
+  border-radius: 0 0 4px 4px;
+  border-top: none;
+  box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+    0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+
+.team-card-desc {
+  text-align: center;
+  padding: 32px 16px;
+}
+
+.team-card-desc .sub-section-header {
+  margin-bottom: 8px;
+}
+
+/* #endregion */
+
+/* #region Products */
+
+.products-section .section-title {
+  margin-bottom: 72px;
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 48px;
+  column-gap: 24px;
+}
+
+.products-item {
+  border: 1px solid #e7e9fc;
+  border-top: none;
+  width: calc((100% - 2 * 24px) / 3);
+}
+
+.products-desc {
+  padding: 32px 16px;
+}
+
+.products-desc > .sub-section-header {
+  margin-bottom: 8px;
+}
+
+/* #endregion */
+
+/* #region Footer */
 
 .page-footer {
   background-color: #2e2f42;
@@ -123,3 +299,15 @@ ul {
 .logo-part-footer {
   color: #f4f4fd;
 }
+
+.page-footer > .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.footer-text {
+  margin-top: 16px;
+  max-width: 264px;
+}
+
+/* #endregion */
