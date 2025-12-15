@@ -126,6 +126,7 @@ img {
 .address-links .link {
   display: block;
   padding: 24px 0;
+  font-weight: 400;
   color: #434455;
 }
 
